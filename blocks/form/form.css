@@ -787,3 +787,42 @@ main div.form-wrapper {
         margin: 0;
     }
 }
+/* Layout overrides to align with reference screenshot */
+:root {
+    /* Teal primary for buttons and wizard number */
+    --button-primary-color: #0f6668;
+    --button-primary-hover-color: #0c5153;
+    --form-wizard-number-color: var(--button-primary-color);
+
+    /* Slightly smaller text scale for labels/descriptions */
+    --form-font-size-s: 16px;
+    --form-font-size-xs: 14px;
+}
+
+/* Center the form and constrain width for a cleaner layout */
+main div.form-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* Pill-shaped buttons like in the screenshot */
+main .form button {
+    border-radius: 24px;
+}
+
+/* Keep file attach button compact within the drop area */
+main .file-wrapper>button {
+    width: auto;
+}
+
+/* Make the dashed upload area larger and airier */
+main .file-wrapper .field-dropregion,
+main .form .file-wrapper .file-drag-area {
+    min-height: 120px;
+}
+
+/* Wizard header underline and spacing similar to screenshot */
+main .form form .wizard .wizard-menu-items {
+    border-bottom: 1px solid var(--form-wizard-border-color);
+    padding-bottom: 12px;
+}
